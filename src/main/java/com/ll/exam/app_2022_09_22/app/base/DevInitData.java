@@ -30,6 +30,7 @@ public class DevInitData {
             if (initDataDone) return;
 
             initDataDone = true;
+
             class Helper {
                 public Order order(Member member, List<ProductOption> productOptions) {
                     for (int i = 0; i < productOptions.size(); i++) {
@@ -123,6 +124,12 @@ public class DevInitData {
                     )
             );
             orderService.payByRestCashOnly(order4);
+
+            Order order5 = helper.order(member1, Arrays.asList(
+                            product1Option__RED_44,
+                            product2Option__WHITE_44
+                    )
+            );
         };
     }
 }
